@@ -3,6 +3,7 @@ import React from 'react'
 class About extends React.Component{
     render(){
         return(<section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
+            
         <div class="container">
             <div class="row">
                 
@@ -22,7 +23,7 @@ class About extends React.Component{
                         </div>
                     </div>
                 </div>
-
+              
                 <div class="col-lg-5 col-md-12 col-12">
                     <div class="about-image-svg">
                         <img src="assets/images/icon/Professional Photo.JPG" class="img-fluid" width="350px" height="200px" />
