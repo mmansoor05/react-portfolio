@@ -27,7 +27,7 @@ class About extends React.Component{
                         </p>
                         
                         <div class="custom-btn-group mt-4">
-                          <a href="assets/Mansoor_Mahnoor.pdf" target="_blank" download class="btn mr-lg-2 custom-btn"><i class='uil uil-file-alt'></i> Download Resume</a>
+                          <a href="assets/Resume.pdf" target="_blank" download class="btn mr-lg-2 custom-btn"><i class='uil uil-file-alt'></i> Download Resume</a>
                         </div>
                     </div>
                 </div>
