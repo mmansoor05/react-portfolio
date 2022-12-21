@@ -17,6 +17,29 @@ class Resume extends React.Component{
                             <div><h2>Work Experience</h2></div>
                           </li>
 
+                          <li class="timeline-inverted animate-box fadeInUp animated-fast">
+                            <div class="timeline-badge">
+                              <VscBriefcase/>
+                              {/* <img src="assets/images/icon/briefcase.png" class="img-fluid" width="15px" height="15px"/> */}
+                            </div>
+                            <div class="timeline-panel">
+                                <div class ="portfolio-background">
+                                  <div class="title-company">
+                                <h3 class="timeline-title">Technical Support Engineer I</h3>
+                                <span class="company">CivicPlus - August 2022 - Current</span>
+                                  </div>
+                                <div class="text">
+                                <p class="resume-text"> Assist clients with solving technical issues via email and chat. Take active part in improving processes to ensure success client interactions. </p>
+                                
+                                
+                                  <p text-align="center" class = "resume-button"> Zendesk</p>
+                                  <p text-align="center" class = "resume-button">HTML</p>
+                                  <p text-align="center" class = "resume-button">Talkdesk</p>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+
                           <li class="animate-box timeline-unverted fadeInUp animated-fast">
                             <div class="timeline-badge">
                              
@@ -31,7 +54,7 @@ class Resume extends React.Component{
                                 <span class="company">Wells Fargo - 2022 - Charlotte, NC</span>
                                    </div>
                                 <div class="text">
-                                <p>Interned for three months with Platform Engineering Team. Worked on automating the fail-over process to improve Recovery Time Objective(RTO).</p>
+                                <p class="resume-text">Interned for three months with Platform Engineering Team. Worked on automating the fail-over process to improve Recovery Time Objective(RTO).</p>
                                  <br/> 
                                   <p text-align="center" class = "resume-button"> Ansible</p>
                                   <p text-align="center" class = "resume-button"> Postman</p>
@@ -53,7 +76,7 @@ class Resume extends React.Component{
                                 <span class="company">Medsphere Systems Corporation - 2021 - 2022</span>
                                   </div>
                                 <div class="text">
-                                <p>Worked with different clients helping users by diagnosing and resoling a range of hardware, network and software issues.</p>
+                                <p class="resume-text">Worked with different clients helping users by diagnosing and resolving a range of hardware, network and software issues.</p>
                                 
                                 
                                   <p text-align="center" class = "resume-button"> Active Directory</p>
@@ -83,7 +106,7 @@ class Resume extends React.Component{
                                 <span class="company">Oregon State University - 2021 - 2024</span>
                                   </div>
                               <div class="text"> 
-                                <p><b>Relevant Coursework</b><br/> Introducton to Programming I <br/> Introducton to Programming II <br/>Computer Architecture <br/> Data Structures <br/> Analysis of Algorithms <br/> Web Development</p>
+                                <p class="resume-text"><b>Relevant Coursework</b><br/> Introducton to Programming I <br/> Introducton to Programming II <br/>Computer Architecture <br/> Data Structures <br/> Analysis of Algorithms <br/> Web Development <br/> Introduction to Databases</p>
                               </div>
                             </div>
                             </div>

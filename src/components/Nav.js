@@ -6,6 +6,7 @@ import {FiGithub} from "react-icons/fi"
 class Nav extends React.Component{
     render(){
         return( 
+        <header class="on-scroll">
         <nav class="navbar navbar-expand-sm navbar-light">
         <div class="container">
 
@@ -43,14 +44,14 @@ class Nav extends React.Component{
                     <div class="icons">
                       <a href="https://github.com/mmansoor05" target="_blank"> 
                       
-                      <FiGithub color="white"/>
+                      <FiGithub color="black"/>
                     </a>
                     <a href="https://www.linkedin.com/in/mahnoor-mansoor-27a498215/" target="_blank">
-                      <AiOutlineLinkedin  color="white" /> 
+                      <AiOutlineLinkedin  color="black" /> 
         
                     </a>
                     <a href="mailto:mahnoormansoor05@gmail.com" target="_blank"> 
-                    <FiMail color="white"/>
+                    <FiMail color="black"/>
                     </a>
                   </div>
                   </div>
@@ -58,6 +59,7 @@ class Nav extends React.Component{
             </div>
         </div>
     </nav>
+    </header>
 
             )
     }

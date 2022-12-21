@@ -9,6 +9,21 @@ import Project from './components/Project';
 import About from './components/About';
 import React from 'react';
 
+const header = document.querySelector("header");
+const sectionOne = document.querySelector(".top-section");
+
+// const navObserver = new IntersectionObserver((entries, observer) => {
+//   const entry = entries[0];
+//   if(!entry.isIntersecting) {
+//     header.classList.add("on-scroll");
+//   }else{
+//     header.classList.remove("on-scroll")
+//   }
+// }, {});
+
+// navObserver.observe(sectionOne)
+
+
 function App() {
   return (
     <div className="App">
