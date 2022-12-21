@@ -52,8 +52,8 @@ class Project extends React.Component{
 
                         <div class="item">
                             <div class="portfolio-thumb portfolio-big">
-                              <a href="assets/images/project/internship-board.PNG">
-                              <img src="assets/images/project/internship-board.PNG" />
+                              <a href="assets/images/project/internship-board.png">
+                              <img src="assets/images/project/internship-board.png" />
                               </a>
                               <p class="description"><b>Internship Board</b>&nbsp;&nbsp;A personal project to store a list of applied internships. A simple CRUD app that lets you add, edit and delete the names of companies where you have applied with application dates. Gives an option to display the data either in a card view or a table view. Made using React, Node and MySQL.
                               </p>
