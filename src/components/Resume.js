@@ -14,7 +14,7 @@ class Resume extends React.Component{
 
                         <ul class="timeline">
                           <li class="timeline-heading text-center animate-box fadeInUp animated-fast">
-                            <div><h2>Work Experience</h2></div>
+                            <div><h2 class="experience-heading">Work Experience</h2></div>
                           </li>
 
                           <li class="timeline-inverted animate-box fadeInUp animated-fast">

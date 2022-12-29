@@ -19,11 +19,14 @@ class About extends React.Component{
                     <div class="about-text">
                          <small class="small-text">Welcome to <span class="mobile-block">my portfolio website!</span></small>
                         <h1 class="animated animated-text">
-                            <span class="mr-2">Hello World, I'm </span>
+                            <span class="mr-2">Hello I'm </span>
                                     <span class="name">Mahnoor</span>
                         </h1>
 
-                        <p class="about-para">I am a computer science student at Oregon State University and will be graduating in 2024. I am fond of front end development. If I am not working on my homework, you will find me taking long walks. And I love mountains more than beaches!
+                        <p class="about-para">I am a computer science student at Oregon State University and will be graduating in Summer 2024. I am interested in front end development and this interest started back five years ago when I started learning to code initially on my own.
+                        When I am not working on my homework, you will find me taking long walks. And I love mountains more than beaches!
+
+                        
                         </p>
                         
                         <div class="custom-btn-group mt-4">

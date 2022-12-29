@@ -7,6 +7,7 @@ import Resume from './components/Resume';
 import Skills from './components/Skills';
 import Project from './components/Project';
 import About from './components/About';
+import {Routes, Route} from 'react-router-dom';
 import React from 'react';
 
 const header = document.querySelector("header");
@@ -27,12 +28,14 @@ const sectionOne = document.querySelector(".top-section");
 function App() {
   return (
     <div className="App">
+       <Routes>
+          <Route path="/about" element={<About/>}/>
+          <Route path="/project" element={<Project/>}/>
+          <Route path="/skills" element={<Skills/>}/>
+          <Route path="/resume" element={<Resume/>}/>
+          <Route path="/contact" element={<Contact/>}/>
+      </Routes>
       <Nav/>
-      <About/>
-      <Project/>
-      <Skills />
-      <Resume />
-      <Contact />
       <Footer/>
     </div>
   );

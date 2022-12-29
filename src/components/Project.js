@@ -41,6 +41,18 @@ class Project extends React.Component{
                       </div> */}
 
                             <div class="item">
+
+                            <div class="portfolio-thumb portfolio-big">
+                              <a href="assets/images/project/Picture3.png">
+                              <img src="assets/images/project/Picture3.png" />
+                              </a>
+                              <p class="description"><b>PokeBase</b>&nbsp;&nbsp;A group project for database class to create a CRUD application. This database driven website allow Pokemon trainers to create a profile for themselves and enter the Pokemon they catch. They can enter the species of Pokemon as well as a nickname they want to give it, the level it is, and what attack it knows. This app gives each Pokemon a unique ID number to differentiate between each individual and also informs Trainers what type a species is, and what they are super effective against, weak against, and what they have no effect on. Trainer also have the ability to create custom attacks, or edit and delete ineffective ones. Made using Handlebars, Javascript and MySQL.
+                              </p>
+                            </div>
+                        </div>
+
+
+                        <div class="item">
                             <div class="portfolio-thumb portfolio-big">
                               <a href="assets/images/project/weather-app.PNG">
                               <img src="assets/images/project/weather-app.PNG" />

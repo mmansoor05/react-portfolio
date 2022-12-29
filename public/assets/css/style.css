@@ -9,11 +9,14 @@
 
 body {
   font-family: "Nunito", sans-serif;
-  padding-top: 70px;
+  padding-top: 50px;
   width: 100%;
   height: 100vh;
   /* background: linear-gradient(-45deg, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%); */
-  background: linear-gradient(-45deg, #65666d 0%, #77768e 13%, #5d556a 25%, #a493b1 38%, #a1839f 50%, #b48d9c 62%, #d3b6b2 75%, #f3caaa 87%, #d3ba8f 100%);
+  /* background: linear-gradient(-45deg, #65666d 0%, #77768e 13%, #5d556a 25%, #a493b1 38%, #a1839f 50%, #b48d9c 62%, #d3b6b2 75%, #f3caaa 87%, #d3ba8f 100%); */
+  /* background-color: rgb(35, 35, 35); */
+  /* background-color: #e1a5a4; */
+
   background-size: 400% 400%;
   position: relative;
   animation: animate 7.5s ease-in-out infinite;
@@ -37,8 +40,24 @@ body {
 
 /* Nav Bar */
 
+li img {
+  margin-top: -110px;
+  margin-left: -232px;
+ }
+
+ li a {
+  margin-top: -23px;
+  margin-left: 32px;
+ }
+/* 
+ .icons {
+  margin-top: -66px;
+ } */
+
+
 .on-scroll nav{
-  background-color: rgb(245, 235, 235);
+  height: 10vh;
+  /* background-color: rgb(245, 235, 235);
   /* box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2); */
 }
 
@@ -60,7 +79,7 @@ nav .navbar-collapse{
   display: flex;
   column-gap: 12px;
   justify-content: space-between;
-  margin-right: -90px;
+  /* margin-right: -90px; */
 }
 
 .navbar-brand .uil {
@@ -81,13 +100,17 @@ ul li {
   text-align: center;
 }
 .navbar {
-  position: fixed;
+  overflow: hidden;
+  position: sticky;
   top: 0;
-  right: 0;
+  width: 100%;
+  /* background-color: transparent; */
+  background-color: rgb(245, 235, 235);
+  /* right: 0;
   left: 0;
   z-index: 999999;
   will-change: transform;
-  transition: transform 200ms linear;
+  transition: transform 200ms linear; */
 }
 
 .navbar-brand {
@@ -124,10 +147,11 @@ ul li {
   padding: 0;
   width: 32px;
   height: 32px;
-  line-height: 32px;
+  /* line-height: 32px; */
   outline: none;
   cursor: pointer;
   margin-right: 10px;
+
 }
 
 .navbar-toggler:focus {
@@ -145,13 +169,19 @@ ul li {
 }
 
 /* About Me */
-
 .row .about-image-svg{
   margin-top: -80px;
 }
 
+.about-para{
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+  font-size: 16px;
+}
+
 .about-text .small-text {
-  /* color: #5b5b5b; */
   color: rgb(218, 71, 95);
   font-size: 14px;
   font-weight: bold;
@@ -174,19 +204,34 @@ a {
   transition: all 0.4s ease;
 }
 
-a:hover {
+a :hover {
   color: #50a9d1 !important;
+}
+
+.custom-btn {
+  /* background: #eee; */
+  color: #5b5b5b;
+  font-weight: bold;
+  border-radius: 50px;
+  padding: 13px 29px;
+  font-size: 14px;
+  line-height: normal;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.custom-btn-group a{
+  border: 1px solid #7510F7;
+  background-color: none;
+  color: #7510F7
 }
 
 
 /* General Styling */
-#project, #resume{
-  background-color: #eee;  
+#project{
+  /* background-color: #eee;   */
+  /* background-color: #FFF7F7; */
  
-}
-
-#skills h2, #contact h2, #about p, #skills p, #contact p, footer p, #about span, #about small{
-  color:white;
 }
 
 .row {
@@ -198,7 +243,6 @@ a:hover {
 div {
   display: block;
 }
-
 
 p {
   font-size: 18px;
@@ -218,10 +262,17 @@ h1 {
   margin: 24px 0;
 }
 
-h2 {
+h2{
   color: #353535;
   font-size: 2em;
   font-weight: bold;
+}
+
+.experience-heading{
+  color: #353535;
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: -20px;
 }
 
 h3 {
@@ -242,7 +293,6 @@ h3, b, strong {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  /* margin-top: 0px; */
 }
 
 ul, ol {
@@ -270,6 +320,8 @@ ul {
   box-sizing: border-box;
 }
 
+
+
 /* Projects */
 
 .float-child {
@@ -296,8 +348,6 @@ ul {
 
 .portfolio-thumb img {
   width: 100%;
-  /* border: 2px solid black; */
-  /* height: 300px; */
 }
 
 a img{
@@ -337,27 +387,135 @@ div .project-name{
 }
 
 /* Skills */
-.custom-btn {
-  background: #eee;
-  color: #5b5b5b;
-  font-weight: bold;
-  border-radius: 50px;
-  padding: 13px 29px;
-  font-size: 14px;
-  line-height: normal;
-  overflow: hidden;
-  transition: all 0.4s ease;
+.skills {
+  width: 200px;
+  margin: auto;
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+h2 {
+  margin-top: 30px;
+  margin-bottom: 22px;
+}
+
+h2 .experience-heading{
+  margin-top: 35px;
+  margin-bottom: 12px;
+}
+
+.skills-wrapper{
+  width: 50rem;
+}
+
+.skills-wrapper img {
+  padding: 1.25rem;
+}
+
+.icon {
+  /* width: 11.875rem;
+  height: 11.25rem; */
+  width: 8rem;
+  height: 7rem;
+}
+
+.icon-card {
+  /* background-color: #fff; */
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--secondary-shadow);
+  padding: 20px;
+  margin: 10px;
+  background-color: rgb(239, 220, 220);
+  border: 2px solid white;
+}
+
+.gfg {
+  position: relative;
+}
+
+.first-text {
+  position: absolute;
+  top: 102px;
+  left: 150px;
+}
+
+.second-text {
+  position: absolute;
+  top: 102px;
+  left: 300px;
+}
+
+.third-text {
+  position: absolute;
+  top: 102px;
+  left: 440px;
+}
+
+.fourth-text {
+  position: absolute;
+  top: 102px;
+  left: 600px;
+}
+
+.fifth-text {
+  position: absolute;
+  top: 105px;
+  left: 150px;
+}
+
+.sixth-text {
+  position: absolute;
+  top: 105px;
+  left: 310px;
+}
+
+.seventh-text {
+  position: absolute;
+  top: 105px;
+  left: 440px;
+}
+
+.eigth-text {
+  position: absolute;
+  top: 105px;
+  left: 590px;
+}
+
+.ninth-text {
+  position: absolute;
+  top: 105px;
+  left: 180px;
+}
+
+.tenth-text {
+  position: absolute;
+  top: 105px;
+  left: 380px;
+}
+
+.eleventh-text {
+  position: absolute;
+  top: 105px;
+  left: 480px;
+}
+
+.twelveth-text {
+  position: absolute;
+  top: 105px;
+  left: 300px;
+}
+
+.thirteenth-text {
+  position: absolute;
+  top: 105px;
+  left: 435px;
 }
 
 .skills{
-  /* border: 1px solid #50a9d1; */
-  border: 1px solid white;
     margin-right: 10px;
-    text-transform: uppercase;
     font-weight: 500;
     width: auto;
     display: inline-block;
-    font-size: 11px;
     line-height: 1.33333em;
     padding: 7px 18px;
     margin-top: 0.8em;
@@ -401,11 +559,6 @@ div .spaces{
     padding: 10px;
     background: white;
 }
-
-/* .col-12 {
-  display:inline-block;
-  border: 2px solid red;
-} */
 
 .timeline {
   list-style: none;
@@ -548,8 +701,9 @@ li {
   top: 40px;
   left: 50%;
   margin-left: -21px;
-  background-color: rgb(195, 163, 136);
-  /* background-color: #a493b1; */
+  /* background-color: rgb(195, 163, 136); */
+
+  background-color: #8ed3ea;
   /* background-color: #50a9d1;  */
   z-index: 100;
   display: table;
@@ -685,21 +839,96 @@ li {
   transition: transform 200ms linear;
 }
 
+/* Contact */
+form{
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 2vw 4vw;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form h3{
+  color: #555;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+form input, form textarea{
+  border:0;
+  margin: 10px 0;
+  padding: 20px;
+  outline: none;
+  background: #f5f5f5;
+  font-size: 16px;
+}
+
+input[type="submit"]{
+  padding: 15px;
+  background: rgb(239, 220, 220);
+  color: black;
+  padding: 15px;
+  border-radius: 5px;
+}
 
 /* Footer */
 .copyright-text {
   font-size: 16px;
   font-weight: normal;
-  display: block;
 }
 
-.copyright-text{
-  font-size: 10px;
+footer {
+  position: absolute;
+  margin-top: 90px;
+  /* bottom: 0; */
+  width: 100%;
+  height: 2.5rem;          
 }
 
-/* Laptop */
-@media (max-width: 991px) {
 
+@media (max-width: 1024px) {
+  .copyright-text {
+    font-size: 14px;
+  }
+
+  .about-para{
+    max-width: 70%;
+    font-size: 15px;
+  }
+  
+  .navbar-toggler {
+    margin-top: -398px; 
+    position: fixed;
+  
+  }
+
+#navbarNav{
+  margin-top: -231px;
+  margin-left: -51px;
+  padding: 0;
+  }
+
+.nav-item {
+  text-indent: -20px;
+}
+
+.on-scroll nav{
+  height: 50%;
+  background-color: transparent;
+}
+
+.logo {
+  margin-top: -310px;
+  margin-left: 160px;
+  width: 150px;
+  height: 150px;
+  position: fixed;
+  
+}
   .about-image-svg .img-fluid{
     border: 2px solid white;
     border-radius: 50%;
@@ -737,7 +966,6 @@ li {
     padding: 0 2rem;
   }
 
-  
   .portfolio-big{
     width: 90%;
     height: auto;
@@ -774,9 +1002,352 @@ li {
   .description{
     font-size: 13px;
   }
+
+  .icon {
+    width: 6rem;
+    height: 5rem;
+  }
+  
+  .icon-card {
+    border-radius: 11px;
+    box-shadow: 0 3px 10px var(--secondary-shadow);
+    padding: 20px;
+    margin: 5px;
+  }
+
+  .gfg {
+    margin-left: -340px;
+  }
+
+  .first-text {
+    position: absolute;
+    top: 70px;
+    left: 390px;
+  }
+  
+  .second-text {
+    position: absolute;
+    top: 70px;
+    left: 490px;
+  }
+  
+  .third-text {
+    position: absolute;
+    top: 70px;
+    left: 600px;
+  }
+  
+  .fourth-text {
+    position: absolute;
+    top: 70px;
+    left: 710px;
+  }
+  
+  .fifth-text {
+    position: absolute;
+    top: 70px;
+    left: 390px;
+  }
+  
+  .sixth-text {
+    position: absolute;
+    top: 70px;
+    left: 500px;
+  }
+  
+  .seventh-text {
+    position: absolute;
+    top: 70px;
+    left: 590px;
+  }
+  
+  .eigth-text {
+    position: absolute;
+    top: 70px;
+    left: 710px;
+  }
+  
+  .ninth-text {
+    position: absolute;
+    top: 70px;
+    left: 410px;
+  }
+  
+  .tenth-text {
+    position: absolute;
+    top: 70px;
+    left: 550px;
+  }
+  
+  .eleventh-text {
+    position: absolute;
+    top: 70px;
+    left: 620px;
+  }
+  
+  .twelveth-text {
+    position: absolute;
+    top: 70px;
+    left: 500px;
+  }
+  
+  .thirteenth-text {
+    position: absolute;
+    top: 70px;
+    left: 590px;
+  }
+
+  .gfg p{
+    font-size: 14px;
+  }
+
+  .skill-header {
+    margin-left: -340px;
+  }
+
+
+}
+
+
+/* Laptop */
+@media (max-width: 991px) {
+
+  .copyright-text {
+    font-size: 14px;
+  }
+
+  .about-para{
+    max-width: 70%;
+    font-size: 15px;
+  }
+  
+  .navbar-toggler {
+    margin-top: -298px; 
+    position: fixed;
+  
+  }
+
+.on-scroll nav{
+  height: 50%;
+  background-color: transparent;
+}
+
+.logo {
+  margin-top: -310px;
+  /* margin-left: 160px; */
+  margin-left: 330px;
+  width: 150px;
+  height: 150px;
+  position: fixed;
+  
+}
+  .about-image-svg .img-fluid{
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-bottom: 22px;
+    margin-top: 0px;
+  }
+
+  .icons {
+    display: flex;
+    column-gap: 12px;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  a:hover {
+    background-color: rgb(245, 235, 235);
+  }
+  
+  .full-screen {
+    padding-bottom: 4rem;
+  }
+
+  .about-image {
+    margin-top: 4em;
+  }
+
+  .mobile-mt-2,
+  .contact-form {
+    margin-top: 2em;
+  }
+
+  .contact-info {
+    padding: 0 2rem;
+  }
+
+  .portfolio-big{
+    width: 90%;
+    height: auto;
+  }
+  
+  .portfolio-thumb{
+    margin: 20px;
+    background-color: white;
+    display: inline-block;
+  }
+  
+  .portfolio-thumb a {
+    text-decoration: underline;
+  }
+  
+  .portfolio-thumb img {
+    width: 100%;
+  }
+  
+  .timeline > li > .timeline-panel {
+    width: 70%;
+    float: right;
+  }
+
+  .timeline:before {
+    left: 50px;
+    
+  }
+
+  .timeline > li > .timeline-badge {
+    left: 50px;
+  }
+
+  .description{
+    font-size: 13px;
+  }
+
+  .icon {
+    width: 6rem;
+    height: 5rem;
+  }
+  
+  .icon-card {
+    border-radius: 11px;
+    box-shadow: 0 3px 10px var(--secondary-shadow);
+    padding: 20px;
+    margin: 5px;
+  }
+
+  .gfg {
+    margin-left: -340px;
+  }
+
+  .first-text {
+    position: absolute;
+    top: 70px;
+    left: 390px;
+  }
+  
+  .second-text {
+    position: absolute;
+    top: 70px;
+    left: 490px;
+  }
+  
+  .third-text {
+    position: absolute;
+    top: 70px;
+    left: 600px;
+  }
+  
+  .fourth-text {
+    position: absolute;
+    top: 70px;
+    left: 710px;
+  }
+  
+  .fifth-text {
+    position: absolute;
+    top: 70px;
+    left: 390px;
+  }
+  
+  .sixth-text {
+    position: absolute;
+    top: 70px;
+    left: 500px;
+  }
+  
+  .seventh-text {
+    position: absolute;
+    top: 70px;
+    left: 590px;
+  }
+  
+  .eigth-text {
+    position: absolute;
+    top: 70px;
+    left: 710px;
+  }
+  
+  .ninth-text {
+    position: absolute;
+    top: 70px;
+    left: 410px;
+  }
+  
+  .tenth-text {
+    position: absolute;
+    top: 70px;
+    left: 550px;
+  }
+  
+  .eleventh-text {
+    position: absolute;
+    top: 70px;
+    left: 620px;
+  }
+  
+  .twelveth-text {
+    position: absolute;
+    top: 70px;
+    left: 500px;
+  }
+  
+  .thirteenth-text {
+    position: absolute;
+    top: 70px;
+    left: 590px;
+  }
+
+  .gfg p{
+    font-size: 14px;
+  }
+
+  .skill-header {
+    margin-left: -340px;
+  }
+
 }
 
 @media (max-width: 767px) {
+
+  /* .copyright-text {
+    font-size: 14px;
+  }
+
+  .about-para{
+    max-width: 70%;
+    font-size: 15px;
+  }
+  
+  .navbar-toggler {
+    margin-top: -298px; 
+    position: fixed;
+  
+  }
+
+.on-scroll nav{
+  height: 50%;
+  background-color: transparent;
+}
+
+.logo {
+  margin-top: -310px;
+  margin-left: 160px;
+  width: 150px;
+  height: 150px;
+  position: fixed;
+} */
 
   .about-image-svg .img-fluid{
     border: 2px solid white;
@@ -855,10 +1426,142 @@ li {
     font-size: 13px;
   }
 
+  .icon {
+    width: 6rem;
+    height: 5rem;
+  }
+  
+  .icon-card {
+    border-radius: 11px;
+    box-shadow: 0 3px 10px var(--secondary-shadow);
+    padding: 20px;
+    margin: 5px;
+  }
+
+  .gfg {
+    margin-left: -340px;
+  }
+
+  .first-text {
+    position: absolute;
+    top: 70px;
+    left: 390px;
+  }
+  
+  .second-text {
+    position: absolute;
+    top: 70px;
+    left: 490px;
+  }
+  
+  .third-text {
+    position: absolute;
+    top: 70px;
+    left: 600px;
+  }
+  
+  .fourth-text {
+    position: absolute;
+    top: 70px;
+    left: 710px;
+  }
+  
+  .fifth-text {
+    position: absolute;
+    top: 70px;
+    left: 390px;
+  }
+  
+  .sixth-text {
+    position: absolute;
+    top: 70px;
+    left: 500px;
+  }
+  
+  .seventh-text {
+    position: absolute;
+    top: 70px;
+    left: 590px;
+  }
+  
+  .eigth-text {
+    position: absolute;
+    top: 70px;
+    left: 710px;
+  }
+  
+  .ninth-text {
+    position: absolute;
+    top: 70px;
+    left: 410px;
+  }
+  
+  .tenth-text {
+    position: absolute;
+    top: 70px;
+    left: 550px;
+  }
+  
+  .eleventh-text {
+    position: absolute;
+    top: 70px;
+    left: 620px;
+  }
+  
+  .twelveth-text {
+    position: absolute;
+    top: 70px;
+    left: 500px;
+  }
+  
+  .thirteenth-text {
+    position: absolute;
+    top: 70px;
+    left: 590px;
+  }
+
+  .gfg p{
+    font-size: 14px;
+  }
+
+  .skill-header {
+    margin-left: -340px;
+  }
+
 }
 
 /* Tablets */
 @media (max-width: 580px) {
+
+  .copyright-text {
+    font-size: 14px;
+  }
+
+  .about-para{
+    max-width: 70%;
+    font-size: 15px;
+  }
+  
+  /* .navbar-toggler {
+    margin-top: -298px; 
+    position: fixed;
+  
+  }
+
+.on-scroll nav{
+  height: 50%;
+  background-color: transparent;
+}
+
+.logo {
+  margin-top: -310px;
+  margin-left: 160px;
+  width: 150px;
+  height: 150px;
+  position: fixed;
+  
+} */
+
 	.animated-info {
 		min-width: 200px;
 	}
@@ -926,11 +1629,142 @@ li {
   .description{
     font-size: 13px;
   }
+
+  .icon {
+    width: 6rem;
+    height: 5rem;
+  }
+  
+  .icon-card {
+    border-radius: 11px;
+    box-shadow: 0 3px 10px var(--secondary-shadow);
+    padding: 20px;
+    margin: 5px;
+  }
+
+  .gfg {
+    margin-left: -340px;
+  }
+
+  .first-text {
+    position: absolute;
+    top: 70px;
+    left: 390px;
+  }
+  
+  .second-text {
+    position: absolute;
+    top: 70px;
+    left: 490px;
+  }
+  
+  .third-text {
+    position: absolute;
+    top: 70px;
+    left: 600px;
+  }
+  
+  .fourth-text {
+    position: absolute;
+    top: 70px;
+    left: 710px;
+  }
+  
+  .fifth-text {
+    position: absolute;
+    top: 70px;
+    left: 390px;
+  }
+  
+  .sixth-text {
+    position: absolute;
+    top: 70px;
+    left: 500px;
+  }
+  
+  .seventh-text {
+    position: absolute;
+    top: 70px;
+    left: 590px;
+  }
+  
+  .eigth-text {
+    position: absolute;
+    top: 70px;
+    left: 710px;
+  }
+  
+  .ninth-text {
+    position: absolute;
+    top: 70px;
+    left: 410px;
+  }
+  
+  .tenth-text {
+    position: absolute;
+    top: 70px;
+    left: 550px;
+  }
+  
+  .eleventh-text {
+    position: absolute;
+    top: 70px;
+    left: 620px;
+  }
+  
+  .twelveth-text {
+    position: absolute;
+    top: 70px;
+    left: 500px;
+  }
+  
+  .thirteenth-text {
+    position: absolute;
+    top: 70px;
+    left: 590px;
+  }
+
+  .gfg p{
+    font-size: 14px;
+  }
+
+  .skill-header {
+    margin-left: -340px;
+  }
 }
 
 
 /* Mobile Devices */
 @media (max-width: 320px) {
+  .copyright-text {
+    font-size: 14px;
+  }
+
+  .about-para{
+    max-width: 70%;
+    font-size: 15px;
+  }
+  
+  /* .navbar-toggler {
+    margin-top: -298px; 
+    position: fixed;
+  
+  }
+
+.on-scroll nav{
+  height: 50%;
+  background-color: transparent;
+}
+
+.logo {
+  margin-top: -310px;
+  margin-left: 160px;
+  width: 150px;
+  height: 150px;
+  position: fixed;
+  
+} */
+
   .about-image-svg .img-fluid{
     border: 2px solid white;
     border-radius: 50%;
@@ -948,7 +1782,7 @@ li {
   a:hover {
     background-color: rgb(245, 235, 235);
   }
-  
+
   .animated-text{
     margin-top: 0;
   }
@@ -1004,6 +1838,108 @@ li {
 
   .description{
     font-size: 13px;
+  }
+
+  .icon {
+    width: 6rem;
+    height: 5rem;
+  }
+  
+  .icon-card {
+    border-radius: 11px;
+    box-shadow: 0 3px 10px var(--secondary-shadow);
+    padding: 20px;
+    margin: 5px;
+  }
+
+  .gfg {
+    margin-left: -340px;
+  }
+
+  .first-text {
+    position: absolute;
+    top: 70px;
+    left: 390px;
+  }
+  
+  .second-text {
+    position: absolute;
+    top: 70px;
+    left: 490px;
+  }
+  
+  .third-text {
+    position: absolute;
+    top: 70px;
+    left: 600px;
+  }
+  
+  .fourth-text {
+    position: absolute;
+    top: 70px;
+    left: 710px;
+  }
+  
+  .fifth-text {
+    position: absolute;
+    top: 70px;
+    left: 390px;
+  }
+  
+  .sixth-text {
+    position: absolute;
+    top: 70px;
+    left: 500px;
+  }
+  
+  .seventh-text {
+    position: absolute;
+    top: 70px;
+    left: 590px;
+  }
+  
+  .eigth-text {
+    position: absolute;
+    top: 70px;
+    left: 710px;
+  }
+  
+  .ninth-text {
+    position: absolute;
+    top: 70px;
+    left: 410px;
+  }
+  
+  .tenth-text {
+    position: absolute;
+    top: 70px;
+    left: 550px;
+  }
+  
+  .eleventh-text {
+    position: absolute;
+    top: 70px;
+    left: 620px;
+  }
+  
+  .twelveth-text {
+    position: absolute;
+    top: 70px;
+    left: 500px;
+  }
+  
+  .thirteenth-text {
+    position: absolute;
+    top: 70px;
+    left: 590px;
+  }
+
+  .gfg p{
+    font-size: 14px;
+  }
+
+  .skill-header {
+    margin-left: -340px;
   }
   
 }
