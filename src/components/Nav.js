@@ -26,7 +26,7 @@ class Nav extends React.Component{
                 <img src="assets/images/icon/logo.png" alt="logo" width="250px"/>
                     </li> */}
                     <li class="nav-item">
-                    <Link to="/about">
+                    <Link to="/">
                         <a href="#about" class="nav-link"><span data-hover="About">About</span></a>
                         </Link>
                     </li>

@@ -29,7 +29,7 @@ function App() {
   return (
     <div className="App">
        <Routes>
-          <Route path="/about" element={<About/>}/>
+          <Route path="/" element={<About/>}/>
           <Route path="/project" element={<Project/>}/>
           <Route path="/skills" element={<Skills/>}/>
           <Route path="/resume" element={<Resume/>}/>
